@@ -1,0 +1,216 @@
+
+* {
+  box-sizing: border-box;
+}
+.heading h1 {
+  text-align: center;
+ /* font-family: Arial, Helvetica, Arial, sans-serif;
+  */
+ /* font-family: Copperplate, Papyrus, fantasy;
+  */
+ /* font-family:sans-serif,Zefani;
+  */
+ /* font-family: Sigmar One;
+  */
+ /* font-family:Bungee Inline;
+  */
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 5px;
+ /* text-shadow: 6px 2px 5px red;
+  */
+ /* width: 100px;
+  */
+ /* height: 100px;
+  */
+ /* background-color: red;
+  */
+  position: relative;
+ /* font-size: 200px;
+  color: rgb(22, 13, 100);
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+  */
+  text-align: center;
+  color: #000;
+  margin: 4rem auto;
+  text-decoration:underline;
+  text-decoration-color: #c59d5f;
+  text-decoration-style:solid;
+  text-decoration-thickness:5px;
+
+
+}
+body {
+  margin: 0;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.event-card {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  margin-bottom: 18rem auto;
+  box-shadow: 0px 2px 8px 0px #37474f;
+  margin-bottom: 1.6%;
+  background: #f7f5ec;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  transition-duration: 1s;
+}
+.event-card:hover{
+  transform: scale(1.1);
+}
+.event-card a {
+  color: inherit;
+}
+.event-card a:hover {
+  color: #5ad67d;
+}
+.event-card:hover .photo {
+  transform: scale(1.3) rotate(3deg);
+}
+.event-card .meta {
+  position: relative;
+  z-index: 0;
+  height: 200px;
+}
+.event-card .photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+.event-card .details, .event-card .details ul {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.event-card .details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  margin: auto;
+  transition: left 0.2s;
+  background: rgba(0, 0, 0, .6);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.event-card .details a {
+  text-decoration: dotted underline;
+}
+.event-card .details ul li {
+  display: inline-block;
+  list-style-type:circle;
+}
+.event-card .details .item1:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "\f007";
+  list-style-type:circle;
+}
+.event-card .details .item2:before {
+  font-family: FontAwesome;
+  margin-right: 10px;
+  content: "\f133";
+}
+.event-card .details .tags ul:before {
+  content: "\f02b";
+  margin-right: 10px;
+  font-weight: bold;
+  list-style-type:none;
+}
+.event-card .details .tags li {
+  margin-right: 2px;
+  list-style-type:circle;
+}
+.event-card .details .tags li:first-child {
+  margin-left: -4px;
+  list-style-type:circle;
+}
+.event-card .description {
+  padding: 1rem;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+.event-card .description h1, .event-card .description h1 {
+  line-height: 1;
+  margin: 0;
+  font-size: 1.7rem;
+}
+.event-card .description h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #a2a2a2;
+  margin-top: 5px;
+}
+.event-card p {
+  position: relative;
+  margin: 1rem 0 0;
+  font-weight: 400;
+}
+.event-card p:first-of-type {
+  margin-top: 1.25rem;
+}
+.event-card p:first-of-type:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  background: #5ad67d;
+  width: 35px;
+  top: -0.75rem;
+  border-radius: 3px;
+}
+.event-card:hover .details {
+  left: 0%;
+}
+@media (min-width: 640px) {
+  .event-card {
+    flex-direction: row;
+    max-width: 700px;
+ }
+  .event-card .meta {
+    flex-basis: 40%;
+    height: auto;
+ }
+  .event-card .description {
+    flex-basis: 60%;
+ }
+  .event-card .description:before {
+    transform: skewX(-3deg);
+    content: "";
+    background: #fff;
+    width: 30px;
+    position: absolute;
+    left: -10px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+ }
+  .event-card.alt {
+    flex-direction: row-reverse;
+ }
+  .event-card.alt .description:before {
+    left: inherit;
+    right: -10px;
+    transform: skew(3deg);
+ }
+  .event-card.alt .details {
+    padding-left: 25px;
+ }
+}
